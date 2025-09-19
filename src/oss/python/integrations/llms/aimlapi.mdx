@@ -36,7 +36,7 @@ Head to [aimlapi.com](https://aimlapi.com/app/?utm_source=langchain&utm_medium=g
 import getpass
 import os
 
-if "AIMLAPI_API_KEY" not in os.environ:
+if not os.getenv("AIMLAPI_API_KEY"):
     os.environ["AIMLAPI_API_KEY"] = getpass.getpass("Enter your AI/ML API key: ")
 ```
 
