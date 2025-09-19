@@ -90,6 +90,15 @@ print(ai_msg.content)
 J'adore la programmation.
 ```
 
+## Streaming invocation
+
+You can also stream responses token-by-token:
+
+```python
+for chunk in llm.stream("List top 5 programming languages in 2025 with reasons."):
+    print(chunk.content, end="", flush=True)
+```
+
 ## Chaining
 
 We can [chain](/oss/how-to/sequence/) our model with a prompt template like so:
